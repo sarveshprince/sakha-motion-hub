@@ -18,7 +18,7 @@ export const Navigation = () => {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
               <img
-                src="Screenshot 2025-11-19 230202.png"   // <-- put your uploaded image path here
+                src="src/components/Screenshot 2025-11-19 230202.png"   // <-- put your uploaded image path here
                 alt="Logo"
                 className="h-6 w-6 object-contain"
               />
