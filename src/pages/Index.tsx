@@ -123,12 +123,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent opacity-90" />
         <img 
           src={exosuitHero} 
-          alt="Sakha ExoSuit" 
+          alt="Synthera Exoflex" 
           className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-5xl font-bold text-white mb-3 drop-shadow-lg">
-            Sakha ExoSuit
+            Synthera Exoflex
           </h1>
           <p className="text-xl text-white/90 max-w-2xl drop-shadow-md">
             Advanced Soft Exoskeleton Control System

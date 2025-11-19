@@ -17,10 +17,14 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <Activity className="h-6 w-6 text-white" />
-            </div>
+              <img
+                src="public/favicon.ico"   // <-- put your uploaded image path here
+                alt="Logo"
+                className="h-6 w-6 object-contain"
+              />
+            </div> 
             <div>
-              <h1 className="font-bold text-lg gradient-text">Sakha ExoSuit</h1>
+              <h1 className="font-bold text-lg gradient-text">Synthera Exoflex</h1>
               <p className="text-xs text-muted-foreground">Control System</p>
             </div>
           </div>
