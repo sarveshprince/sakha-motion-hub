@@ -1,4 +1,4 @@
-export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000" || "https://exo-flex-backend.vercel.app"
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "https://exo-flex-backend.vercel.app"
 export const TOKEN_STORAGE_KEY = "exoflex_auth_token"
 
 export interface ApiError extends Error {
