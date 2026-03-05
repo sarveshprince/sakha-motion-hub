@@ -11,7 +11,7 @@ import { PublicRoute } from "@/components/auth/PublicRoute"
 import LandingPage from "@/pages/LandingPage"
 import LoginPage from "@/pages/LoginPage"
 import RegisterPage from "@/pages/RegisterPage"
-import DashboardPage from "@/pages/index"
+import DashboardPage from "@/pages/Index"
 
 const queryClient = new QueryClient()
 
