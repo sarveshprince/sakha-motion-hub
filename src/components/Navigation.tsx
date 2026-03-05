@@ -1,9 +1,11 @@
 import { NavLink } from "@/components/NavLink";
 import { Activity, Dumbbell, Move, Heart, LayoutDashboard } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
 
 const navItems = [
-  { path: "/", label: "Dashboard", icon: LayoutDashboard },
+  { path: "/app", label: "Dashboard", icon: LayoutDashboard },
   { path: "/walking", label: "Walking", icon: Activity },
   { path: "/lifting", label: "Lifting", icon: Dumbbell },
   { path: "/squat", label: "Squat", icon: Move },
@@ -11,6 +13,8 @@ const navItems = [
 ];
 
 export const Navigation = () => {
+  const { user, logout } = useAuth();
+
   return (
     <nav className="bg-card/80 backdrop-blur-xl border-b border-border/50 sticky top-0 z-50 shadow-soft">
       <div className="container mx-auto px-4">
@@ -29,7 +33,17 @@ export const Navigation = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
+            <NavLink
+              to="/dashboard"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium",
+                "transition-all duration-200 hover:bg-muted/50"
+              )}
+              activeClassName="bg-primary text-primary-foreground shadow-glow"
+            >
+              <span className="hidden md:inline">Account</span>
+            </NavLink>
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -48,6 +62,9 @@ export const Navigation = () => {
                 </NavLink>
               );
             })}
+            <Button variant="outline" size="sm" onClick={() => void logout()}>
+              Logout {user ? `(${user.role})` : ""}
+            </Button>
           </div>
         </div>
       </div>
